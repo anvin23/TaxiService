@@ -1,0 +1,54 @@
+<div class="inner-container">
+  <h1 mat-dialog-title class="gialog-title">Sign up</h1>
+  <div mat-dialog-content class="dialog-content">
+    <!-- <form action="" class="dialog-form"> -->
+
+    <p>Your name*: </p>
+    <mat-form-field>
+      <mat-label> Name </mat-label>
+      <input matInput [(ngModel)] = "first_name">
+    </mat-form-field>
+
+    <p> Middle name: </p>
+    <mat-form-field>
+      <mat-label> Middle name </mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <p> Second name: </p>
+    <mat-form-field>
+      <mat-label>Second name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <p> Phone number: </p>
+    <mat-form-field>
+      <mat-label>Phone number</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <p> Card number </p>
+    <mat-form-field>
+      <mat-label>Card number </mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <p> E-mail: </p>
+    <mat-form-field>
+      <mat-label>E-mail</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <p> Password: </p>
+    <mat-form-field>
+      <mat-label>Password</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <!-- </form> -->
+
+  </div>
+  <div mat-dialog-actions class="submit-container">
+    <button mat-raised-button color="primary" mat-dialog-close class="submit-btn">Sign up me</button>
+  </div>
+</div>

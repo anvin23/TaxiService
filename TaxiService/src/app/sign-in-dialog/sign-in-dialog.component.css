@@ -1,0 +1,27 @@
+.inner-container{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    align-items: center;
+}
+.dialog-content{
+
+    display: flex;
+    flex-direction: column;
+    margin-left: 3px;
+    margin-right: 3px;
+    align-self: stretch;
+}
+.ng-star-inserted{
+    border-radius: 100px;
+}
+.submit-container{
+    justify-content: center;
+    margin-bottom: 5px;
+}
+.dialog-form{
+    width: 100%;
+}
+.dialog-title{
+    width: 100px;
+}

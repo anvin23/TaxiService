@@ -1,0 +1,11 @@
+.navbar{
+    /* display: flex; */
+    justify-content: space-between;
+}
+span{
+    margin-left: 1rem;
+}
+
+.grid-component{
+    background-color:lightblue;
+}
