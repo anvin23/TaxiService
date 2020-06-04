@@ -13,6 +13,12 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
 import { MatGridListModule, MatGridList } from "@angular/material/grid-list";
 import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from "@angular/material/dialog";
+import { MatCheckboxModule} from "@angular/material/checkbox";
+import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatRadioModule } from "@angular/material/radio"
+import { MatDatepickerModule } from '@angular/material/datepicker';
+import { MatNativeDateModule } from '@angular/material/core';
+
 
 @NgModule({
   imports: [
@@ -29,7 +35,12 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from "@angular/material/dialo
     MatButtonToggleModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCheckboxModule,
+    FlexLayoutModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule
     
 
   ],
@@ -47,7 +58,13 @@ import { MatDialog, MatDialogRef, MAT_DIALOG_DATA} from "@angular/material/dialo
     MatButtonToggleModule,
     MatGridListModule,
     MatFormFieldModule,
-    MatDialogModule
+    MatDialogModule,
+    MatCheckboxModule,
+    FlexLayoutModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule
+
   ]
 
 })

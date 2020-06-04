@@ -1,9 +1,17 @@
-import { Component, OnInit, Inject, Input } from '@angular/core';
+import { Component, OnInit, Inject, Input, COMPILER_OPTIONS } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from "@angular/forms";
 import { MatDialog, MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 import { SignupDialogComponent } from './signup-dialog/signup-dialog.component';
 import { SignInDialogComponent } from './sign-in-dialog/sign-in-dialog.component';
+import { UserAddingFormComponent } from './user-adding-form/user-adding-form.component';
 
+import { OperatorAddingFormComponent } from './operator-adding-form/operator-adding-form.component';
+import { DriverAddingFormComponent } from './driver-adding-form/driver-adding-form.component';
+
+export interface DialogData {
+  
+  first_name: string;
+}
 
 
 @Component({
@@ -11,34 +19,32 @@ import { SignInDialogComponent } from './sign-in-dialog/sign-in-dialog.component
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  title = "TaxiService";
+export class AppComponent  {
+   first_name: string;
 
-  first_name: string;
 
   constructor(public dialog: MatDialog) { }
-  openDialog(): void {
-    const dialogRef = this.dialog.open(SignupDialogComponent, {
-      width: '450px',
-      data: { first_name: "this.first_name" }
+
+  openOperatorAdding(): void {
+
+    const dialogRef = this.dialog.open(OperatorAddingFormComponent,{
     });
+    
     dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      console.log(this.first_name);
+      console.log('The dialog was closed: ');
+      // this.first_name = result;
     });
 
-  }
-  ngOnInit() {
-    console.log(this.first_name);
-
-  }
-  openDialog1() {
-    this.dialog.open(SignInDialogComponent, {
-      width: '450px'
-
-    })
-
-
-  }
-
+    
+  } 
+  /* openDriverAdding(): void {
+    const dia = this.dialog.open(DriverAddingFormComponent, {
+      data: { first_name: this.first_name }
+    });
+    dia.afterClosed().subscribe(result => {
+      console.log('The dialog was closed: ' + this.first_name);
+      this.first_name = result;
+    });
+  } */
 }
+

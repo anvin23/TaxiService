@@ -1,0 +1,34 @@
+.main-footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 10%;
+    background-color: rgb(207, 207, 207);
+    padding: 2%;
+}
+
+.footer-wrapper{
+    width: 32%;
+    padding-left: 15px;
+}
+.social-enum{
+    width: 100%;
+}
+.soc-link{
+    text-decoration: none;
+    color:rgb(107, 107, 107);
+    font-size: 10px;
+
+}
+.soc-link:hover{
+    text-decoration: none;
+    color:rgb(158, 158, 158);
+}
+.bank-card{
+    width: 15%;
+    
+}
+.inc{
+    color:rgb(107, 107, 107);
+
+}

@@ -16,6 +16,16 @@
 </mat-grid-list>
 
 <button mat-raised-button (click)="openDialog()">Sign up</button>
-<button mat-raised-button (click)="openDialog1()">Sign in</button>
-<h3 *ngIf = "first_name"> Your name:  <i>{{first_name}}</i></h3>
+<button mat-raised-button (click)="openSignInDialog()">Sign in</button>
+<button mat-raised-button (click)="openDriverAdding()">Add Driver</button>
+<button mat-raised-button (click)="openOperatorAdding()">Add Operator</button>
+<mat-radio-button class="example-margin" value="after">After</mat-radio-button>
+<li *ngIf="first_name"> 
+  Operator name: <i>{{first_name}}</i>
+</li>
 
+<li *ngIf="first_name">
+  Driver name: <i>{{first_name}}</i>
+</li>
+<operator-adding></operator-adding>
+<app-main-footer> </app-main-footer>

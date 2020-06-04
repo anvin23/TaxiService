@@ -1,0 +1,61 @@
+<div class="inner-container">
+  <h1 mat-dialog-title class="gialog-title">Додати нового користувача</h1>
+
+  <div mat-dialog-content class="dialog-content">
+    <h3> Персональна інформація </h3>
+    <div class="personal-details" fxLayout="row" fxLayoutAlign="space-between" fxLayoutGap="10px">
+
+      <div fxLayout="column" fxLayoutGap="10px">
+        <mat-form-field>
+          <mat-label>Ім'я</mat-label>
+          <input matInput [(ngModel)]="first_name" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label> По-батькові </mat-label>
+          <input matInput [(ngModel)]="middle_name">
+        </mat-form-field>
+
+        <mat-form-field class="example-full-width">
+          <mat-label>E-mail</mat-label>
+          <input matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+            placeholder="Ex. pat@example.com">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Введіть коректний E-mail
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            E-mail <strong>обов'язковий</strong>
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+
+      <div fxLayout="column" fxLayoutGap="10px">
+        <mat-form-field>
+          <mat-label> Прізвище </mat-label>
+          <input matInput [(ngModel)]="last_name" required>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label> Номер телефону </mat-label>
+          <input matInput [(ngModel)]="personal_phone" required>
+          <mat-icon matSuffix>phone</mat-icon>
+        </mat-form-field>
+
+        <mat-form-field>
+          <mat-label>Номер кредитної карти </mat-label>
+          <input matInput [(ngModel)]="credit_card">
+          <mat-icon matSuffix >credit_card</mat-icon>
+
+        </mat-form-field>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div mat-dialog-actions class="submit-container" fxLayout="row" fxLayoutAlign="center">
+    <button mat-raised-button color="primary" mat-dialog-close class="submit-btn">Додати</button>
+  </div>
+</div>
